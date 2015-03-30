@@ -38,21 +38,21 @@ cornify_ie6_add = function() {
 		style.left = (e=de.scrollLeft?e:bd.scrollLeft) + Math.round( Math.random()*(windowWidth-200) )  + 'px';
 	}
 
-	if (cornify_count == 15) {
+	if (cornify_count == 3) {
 		clearInterval(cornify_timer);
 	}
 
-	var img = document.createElement('img');
+	/**var img = document.createElement('img');
 	var currentTime = new Date();
 	var submitTime = currentTime.getTime();
 	if( cornify_count==1 ) submitTime = 1;
 	img.setAttribute('src',cornify_url+'getacorn.php?r=' + submitTime + '&url='+document.location.href);
 	var body = document.getElementsByTagName('body')[0];
 	body.appendChild(div);
-	div.appendChild(img);
+	div.appendChild(img);*/
 
 	// Add stylesheet.
-	if (cornify_count == 5) {
+	if (cornify_count == 3) {
 		cornify_addcss('cornify');
 		cornify_replace();
 	}
@@ -95,7 +95,6 @@ cornify_addcss = function( file ) {
 
 cornify_init = function() {
 	cornify_timer = setInterval('cornify_ie6_add()', 1000);
-	cornify_ie6_remove;
 }
 
 cornify_init();
