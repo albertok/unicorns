@@ -95,6 +95,7 @@ cornify_addcss = function( file ) {
 
 cornify_init = function() {
 	cornify_timer = setInterval('cornify_ie6_add()', 1000);
+	cornify_ie6_remove;
 }
 
 cornify_init();
